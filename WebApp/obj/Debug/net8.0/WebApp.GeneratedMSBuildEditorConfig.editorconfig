@@ -17,59 +17,67 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebApp
 build_property.RootNamespace = WebApp
-build_property.ProjectDir = D:\Users\lukasz.janus\RiderProjects\Lab9\WebApp\
+build_property.ProjectDir = C:\Users\Łukasz\RiderProjects\Lab09\WebApp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Users\lukasz.janus\RiderProjects\Lab9\WebApp
+build_property.MSBuildProjectDirectory = C:\Users\Łukasz\RiderProjects\Lab09\WebApp
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Users/lukasz.janus/RiderProjects/Lab9/WebApp/Views/Home/Index.cshtml]
+[C:/Users/Łukasz/RiderProjects/Lab09/WebApp/Views/Actor/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWN0b3JcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Łukasz/RiderProjects/Lab09/WebApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/lukasz.janus/RiderProjects/Lab9/WebApp/Views/Home/Privacy.cshtml]
+[C:/Users/Łukasz/RiderProjects/Lab09/WebApp/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/lukasz.janus/RiderProjects/Lab9/WebApp/Views/Movie/Create.cshtml]
+[C:/Users/Łukasz/RiderProjects/Lab09/WebApp/Views/Movie/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/lukasz.janus/RiderProjects/Lab9/WebApp/Views/Movie/Delete.cshtml]
+[C:/Users/Łukasz/RiderProjects/Lab09/WebApp/Views/Movie/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/lukasz.janus/RiderProjects/Lab9/WebApp/Views/Movie/Details.cshtml]
+[C:/Users/Łukasz/RiderProjects/Lab09/WebApp/Views/Movie/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/lukasz.janus/RiderProjects/Lab9/WebApp/Views/Movie/Edit.cshtml]
+[C:/Users/Łukasz/RiderProjects/Lab09/WebApp/Views/Movie/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/lukasz.janus/RiderProjects/Lab9/WebApp/Views/Movie/Index.cshtml]
+[C:/Users/Łukasz/RiderProjects/Lab09/WebApp/Views/Movie/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/lukasz.janus/RiderProjects/Lab9/WebApp/Views/Shared/Error.cshtml]
+[C:/Users/Łukasz/RiderProjects/Lab09/WebApp/Views/Movie/MoviesByActor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVcTW92aWVzQnlBY3Rvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Łukasz/RiderProjects/Lab09/WebApp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/lukasz.janus/RiderProjects/Lab9/WebApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Łukasz/RiderProjects/Lab09/WebApp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/lukasz.janus/RiderProjects/Lab9/WebApp/Views/_ViewImports.cshtml]
+[C:/Users/Łukasz/RiderProjects/Lab09/WebApp/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/lukasz.janus/RiderProjects/Lab9/WebApp/Views/_ViewStart.cshtml]
+[C:/Users/Łukasz/RiderProjects/Lab09/WebApp/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/lukasz.janus/RiderProjects/Lab9/WebApp/Views/Shared/_Layout.cshtml]
+[C:/Users/Łukasz/RiderProjects/Lab09/WebApp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-7882z672yd

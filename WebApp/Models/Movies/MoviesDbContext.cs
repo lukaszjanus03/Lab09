@@ -205,36 +205,40 @@ public partial class MoviesDbContext : DbContext
 
         modelBuilder.Entity<MovieCast>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("movie_cast");
+            entity.HasKey(e => new { e.MovieId, e.PersonId }); // Klucz kompozytowy
+
+            entity.ToTable("movie_cast");
+
+            entity.Property(e => e.MovieId)
+                .HasColumnName("movie_id");
+
+            entity.Property(e => e.PersonId)
+                .HasColumnName("person_id"); // Mapowanie kolumny `person_id`
+
+            entity.Property(e => e.CharacterName)
+                .HasColumnName("character_name");
+
+            entity.Property(e => e.GenderId)
+                .HasColumnName("gender_id");
 
             entity.Property(e => e.CastOrder)
-                .HasDefaultValueSql("NULL")
-                .HasColumnType("INT")
                 .HasColumnName("cast_order");
-            entity.Property(e => e.CharacterName)
-                .HasDefaultValueSql("NULL")
-                .HasColumnName("character_name");
-            entity.Property(e => e.GenderId)
-                .HasDefaultValueSql("NULL")
-                .HasColumnType("INT")
-                .HasColumnName("gender_id");
-            entity.Property(e => e.MovieId)
-                .HasDefaultValueSql("NULL")
-                .HasColumnType("INT")
-                .HasColumnName("movie_id");
-            entity.Property(e => e.PersonId)
-                .HasDefaultValueSql("NULL")
-                .HasColumnType("INT")
-                .HasColumnName("person_id");
 
-            entity.HasOne(d => d.Gender).WithMany().HasForeignKey(d => d.GenderId);
+            entity.HasOne(d => d.Gender)
+                .WithMany()
+                .HasForeignKey(d => d.GenderId);
 
-            entity.HasOne(d => d.Movie).WithMany().HasForeignKey(d => d.MovieId);
+            entity.HasOne(d => d.Movie)
+                .WithMany(m => m.MovieCasts)
+                .HasForeignKey(d => d.MovieId);
 
-            entity.HasOne(d => d.Person).WithMany().HasForeignKey(d => d.PersonId);
+            entity.HasOne(d => d.Person)
+                .WithMany(p => p.MovieCasts)
+                .HasForeignKey(d => d.PersonId);
         });
+
+
+
 
         modelBuilder.Entity<MovieCompany>(entity =>
         {
@@ -358,11 +362,13 @@ public partial class MoviesDbContext : DbContext
             entity.Property(e => e.PersonId)
                 .ValueGeneratedNever()
                 .HasColumnType("INT")
-                .HasColumnName("person_id");
+                .HasColumnName("person_id"); // Upewnij się, że ta nazwa jest zgodna z bazą danych.
+        
             entity.Property(e => e.PersonName)
                 .HasDefaultValueSql("NULL")
                 .HasColumnName("person_name");
         });
+
 
         modelBuilder.Entity<ProductionCompany>(entity =>
         {
@@ -399,8 +405,8 @@ public partial class MoviesDbContext : DbContext
             entity.HasOne(d => d.Movie).WithMany().HasForeignKey(d => d.MovieId);
         });
 
-        OnModelCreatingPartial(modelBuilder);
+        
     }
+    
 
-    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }

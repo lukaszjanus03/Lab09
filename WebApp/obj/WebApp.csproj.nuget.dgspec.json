@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\lukasz.janus\\RiderProjects\\Lab9\\WebApp\\WebApp.csproj": {}
+    "C:\\Users\\Łukasz\\RiderProjects\\Lab09\\WebApp\\WebApp.csproj": {}
   },
   "projects": {
-    "D:\\Users\\lukasz.janus\\RiderProjects\\Lab9\\WebApp\\WebApp.csproj": {
+    "C:\\Users\\Łukasz\\RiderProjects\\Lab09\\WebApp\\WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\lukasz.janus\\RiderProjects\\Lab9\\WebApp\\WebApp.csproj",
+        "projectUniqueName": "C:\\Users\\Łukasz\\RiderProjects\\Lab09\\WebApp\\WebApp.csproj",
         "projectName": "WebApp",
-        "projectPath": "D:\\Users\\lukasz.janus\\RiderProjects\\Lab9\\WebApp\\WebApp.csproj",
-        "packagesPath": "D:\\Users\\lukasz.janus\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\lukasz.janus\\RiderProjects\\Lab9\\WebApp\\obj\\",
+        "projectPath": "C:\\Users\\Łukasz\\RiderProjects\\Lab09\\WebApp\\WebApp.csproj",
+        "packagesPath": "C:\\Users\\Łukasz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Łukasz\\RiderProjects\\Lab09\\WebApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "D:\\Users\\lukasz.janus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Łukasz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -88,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

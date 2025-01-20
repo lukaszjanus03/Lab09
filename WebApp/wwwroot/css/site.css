@@ -20,3 +20,34 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap; /* Zwijanie, jeśli nie mieści się w jednej linii */
+  justify-content: center; /* Wyśrodkowanie paginacji */
+}
+
+.pagination .page-item {
+  margin: 0 5px; /* Odstępy między elementami */
+}
+
+.pagination .page-link {
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #007bff;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.pagination .page-item.disabled .page-link {
+  color: #6c757d;
+  pointer-events: none;
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}

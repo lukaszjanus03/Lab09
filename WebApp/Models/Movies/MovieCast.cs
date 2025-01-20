@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace WebApp.Models.Movies;
 
@@ -7,7 +6,7 @@ public partial class MovieCast
 {
     public int? MovieId { get; set; }
 
-    public int? PersonId { get; set; }
+    public int? PersonId { get; set; } // Kolumna `person_id` w bazie danych
 
     public string? CharacterName { get; set; }
 

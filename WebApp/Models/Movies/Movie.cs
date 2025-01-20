@@ -30,4 +30,8 @@ public partial class Movie
     public double? VoteAverage { get; set; }
 
     public int? VoteCount { get; set; }
+    
+    public virtual ICollection<MovieCast> MovieCasts { get; set; } = new List<MovieCast>();
+
+
 }

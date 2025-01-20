@@ -3,12 +3,14 @@ using WebApp.Models.Movies;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Dodaj logowanie SQL podczas konfiguracji DbContext
+builder.Services.AddDbContext<MoviesDbContext>(options =>
+    options.UseSqlite("data source=C:\\data\\movies.db") // Ścieżka do Twojej bazy danych SQLite
+        .LogTo(Console.WriteLine, LogLevel.Information) // Logowanie zapytań SQL do konsoli
+        .EnableSensitiveDataLogging()); // Opcjonalne: loguje wartości parametrów (tylko do debugowania!)
+
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<MoviesDbContext>(op =>
-{
-    op.UseSqlite(builder.Configuration["MoviesDatabase:ConnectionString"]);
-});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

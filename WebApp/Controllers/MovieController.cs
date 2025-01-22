@@ -17,8 +17,7 @@ namespace WebApp.Controllers
         {
             _context = context;
         }
-
-        // GET: Movie
+        
         public async Task<IActionResult> Index(int page = 1, int size = 20)
         {
             var movies = await _context.Movies
@@ -30,8 +29,7 @@ namespace WebApp.Controllers
 
             var totalItems = await _context.Movies.CountAsync();
             var totalPages = (int)Math.Ceiling((double)totalItems / size);
-
-            // Przekazujemy do ViewData także TotalPages
+            
             ViewData["CurrentPage"] = page;
             ViewData["PageSize"] = size;
             ViewData["TotalItems"] = totalItems;
@@ -40,7 +38,6 @@ namespace WebApp.Controllers
             return View(movies);
         }
         
-        // GET: Movie/MoviesByActor/{actorId}
         public async Task<IActionResult> MoviesByActor(int actorId)
         {
             var movies = await _context.MovieCasts
@@ -48,10 +45,9 @@ namespace WebApp.Controllers
                 .Select(mc => new MovieByActorViewModels
                 {
                     Title = mc.Movie.Title,
-                    Budget = mc.Movie.Budget ?? 0m, // Jeśli Budget jest null, ustawiamy domyślną wartość 0
-                    Popularity = mc.Movie.Popularity ?? 0.0, // Jeśli Popularity jest null, ustawiamy domyślną wartość 0
+                    Budget = mc.Movie.Budget ?? 0m, 
+                    Popularity = mc.Movie.Popularity ?? 0.0, 
                     Homepage = mc.Movie.Homepage,
-                    // Konwersja ReleaseDate na string, jeśli jest wartość
                     ReleaseDate = mc.Movie.ReleaseDate.HasValue ? mc.Movie.ReleaseDate.Value.ToString("yyyy-MM-dd") : null,
                     MovieId = mc.Movie.MovieId,
                     Characters = mc.Movie.MovieCasts
@@ -67,11 +63,9 @@ namespace WebApp.Controllers
             }
             ViewData["actorId"] = actorId;
             return View(movies);
+            
         }
-
-
         
-        // GET: Movie/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -89,14 +83,12 @@ namespace WebApp.Controllers
 
             return View(movie);
         }
-
-        // GET: Movie/Create
+        
         public IActionResult Create()
         {
             return View();
         }
-
-        // POST: Movie/Create
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(MovieCreateForm form)
@@ -112,7 +104,7 @@ namespace WebApp.Controllers
                     Popularity = form.Popularity,
                     ReleaseDate = form.ReleaseDate.HasValue
                         ? DateOnly.FromDateTime(form.ReleaseDate.Value)
-                        : null, // Konwersja DateTime? -> DateOnly?
+                        : null, 
                     Revenue = form.Revenue,
                     Runtime = form.Runtime,
                     MovieStatus = form.MovieStatus,
@@ -129,7 +121,6 @@ namespace WebApp.Controllers
             return View(form);
         }
         
-        // GET: Movie/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -144,8 +135,7 @@ namespace WebApp.Controllers
             }
             return View(movie);
         }
-
-        // POST: Movie/Edit/5
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("MovieId,Title,Budget,Homepage,Overview,Popularity,ReleaseDate,Revenue,Runtime,MovieStatus,Tagline,VoteAverage,VoteCount")] Movie movie)
@@ -177,8 +167,7 @@ namespace WebApp.Controllers
             }
             return View(movie);
         }
-
-        // GET: Movie/Delete/5
+        
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -195,8 +184,7 @@ namespace WebApp.Controllers
 
             return View(movie);
         }
-
-        // POST: Movie/Delete/5
+        
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

@@ -1,17 +1,14 @@
 ﻿@model WebApp.Models.ViewModels.AddMovieViewModel
 
-@{
-    ViewData["Title"] = "Dodaj film dla @Model.ActorName";
-}
-
 <h1>Dodaj film dla @Model.ActorName</h1>
 
-<!-- Wyświetlanie błędów ogólnych (np. jeżeli ActorId jest null) -->
 <div asp-validation-summary="All" class="text-danger"></div>
 
 <form asp-action="AddMovie" method="post">
-    <!-- Ukryte pole z ID aktora -->
+    
     <input type="hidden" asp-for="ActorId" />
+    
+    <input type="hidden" asp-for="ActorName" />
 
     <div class="form-group">
         <label asp-for="SelectedMovieId"></label>

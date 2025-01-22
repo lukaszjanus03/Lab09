@@ -1,0 +1,53 @@
+﻿@model IEnumerable<WebApp.Models.ViewModels.MovieByActorViewModels>
+
+@{
+    ViewBag.Title = "Movies By Actor";
+}
+
+<h1>Movies By Actor</h1>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Budget</th>
+        <th>Popularity</th>
+        <th>Homepage</th>
+        <th>Release Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var movie in Model)
+    {
+        <tr>
+            <td>@movie.Title</td>
+            <td>@movie.Budget</td>
+            <td>@movie.Popularity</td>
+            @if (@movie.Homepage == "")
+            {
+                <td>Movie homepage not found</td>
+            }
+            else
+            {
+                <td>@movie.Homepage</td>
+            }
+            <td>@movie.ReleaseDate</td>
+            
+        </tr> 
+    }
+    </tbody>
+</table>
+
+<h1>Movies By Actor</h1>
+
+<table class="table">
+    <!-- Tabela z filmami -->
+</table>
+
+<a asp-controller="Actor" 
+   asp-action="AddMovie" 
+   asp-route-id="@(ViewData["actorId"])"
+   class="btn btn-primary">
+   Dodaj film
+</a>
+

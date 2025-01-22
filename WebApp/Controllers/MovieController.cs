@@ -65,7 +65,7 @@ namespace WebApp.Controllers
             {
                 return NotFound($"No movies found for actor with ID {actorId}.");
             }
-
+            ViewData["actorId"] = actorId;
             return View(movies);
         }
 
